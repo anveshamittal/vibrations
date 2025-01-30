@@ -958,11 +958,11 @@ body.nav-active { overflow: hidden; }
   list-style: none;
   margin: 0;
   width: 240%;
-  scroll-behavior: smooth;
-    scrollbar-width: none;
+  /* scroll-behavior: smooth;
+    scrollbar-width: none; */
 }
 .onstage-events::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome */
+  display: none; 
 }
 
 .onstage-events li {

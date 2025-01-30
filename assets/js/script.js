@@ -173,30 +173,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const eventContainers = document.querySelectorAll(".onstage-events, .offstage-events");
 
   eventContainers.forEach(eventContainer => {
-      let scrollSpeed = 4; // Adjust speed here
+      let scrollSpeed = 3; // Adjust speed as needed
       let isPaused = false;
-
+      
       function scrollEvents() {
           if (!isPaused) {
               eventContainer.scrollLeft += scrollSpeed;
 
-              // Reset scroll position when reaching the end
+              // Reset to start if reached end
               if (eventContainer.scrollLeft + eventContainer.clientWidth >= eventContainer.scrollWidth) {
                   eventContainer.scrollLeft = 0;
               }
           }
+          requestAnimationFrame(scrollEvents); // Ensures continuous execution
       }
 
-      let scrollInterval = setInterval(scrollEvents, 30); // Adjust speed here
-
       // Pause scrolling when hovering
-      eventContainer.addEventListener("mouseenter", () => {
-          isPaused = true;
-      });
-
+      eventContainer.addEventListener("mouseenter", () => isPaused = true);
+      
       // Resume scrolling when mouse leaves
-      eventContainer.addEventListener("mouseleave", () => {
-          isPaused = false;
-      });
+      eventContainer.addEventListener("mouseleave", () => isPaused = false);
+
+      scrollEvents(); // Start infinite scrolling
   });
 });
