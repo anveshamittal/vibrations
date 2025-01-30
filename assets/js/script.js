@@ -168,3 +168,35 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const eventContainers = document.querySelectorAll(".onstage-events, .offstage-events");
+
+  eventContainers.forEach(eventContainer => {
+      let scrollSpeed = 4; // Adjust speed here
+      let isPaused = false;
+
+      function scrollEvents() {
+          if (!isPaused) {
+              eventContainer.scrollLeft += scrollSpeed;
+
+              // Reset scroll position when reaching the end
+              if (eventContainer.scrollLeft + eventContainer.clientWidth >= eventContainer.scrollWidth) {
+                  eventContainer.scrollLeft = 0;
+              }
+          }
+      }
+
+      let scrollInterval = setInterval(scrollEvents, 30); // Adjust speed here
+
+      // Pause scrolling when hovering
+      eventContainer.addEventListener("mouseenter", () => {
+          isPaused = true;
+      });
+
+      // Resume scrolling when mouse leaves
+      eventContainer.addEventListener("mouseleave", () => {
+          isPaused = false;
+      });
+  });
+});
