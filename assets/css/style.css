@@ -318,8 +318,9 @@ body.nav-active { overflow: hidden; }
   color: var(--gold-crayola);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
-  letter-spacing: var(--letterSpacing-2);
+  letter-spacing: var(--letterSpacing-1);
   margin-block-end: 12px;
+  font-size: 30px;
 }
 
 .section-subtitle::after {
@@ -1820,8 +1821,9 @@ textarea.input-field {
   .service .shape { display: block; }
 
   .service .shape-1 {
-    bottom: 0;
+    bottom: 36px;
     left: 0;
+    opacity: 25%;
   }
 
   .service .shape-2 {
