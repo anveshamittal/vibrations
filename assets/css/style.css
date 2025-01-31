@@ -970,9 +970,14 @@ body.nav-active { overflow: hidden; }
   width: 250px; /* Set a fixed width for the cards */
 }
 
-.event-card img{
-  height: 228px;
+.event-image {
+  width: 100%; 
+  height: 248px; 
+  object-fit: contain; 
+  
+  margin-bottom: 10px;
 }
+
 
 .onstage-events .event-card {
   background-color: var(--eerie-black-3);
