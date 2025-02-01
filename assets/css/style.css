@@ -2190,6 +2190,31 @@ textarea.input-field {
     bottom: 80px;
     left: 0;
   }
+  .section, header, footer {
+    transition: opacity 0.7s ease-out; /* More dramatic fade */
+}
+.section, header, footer {
+  transition: opacity 0.7s ease-out, filter 0.7s ease-out;
+  will-change: opacity, filter;
+}
+
+.section.fading, header.fading, footer.fading {
+  filter: blur(10px); /* Adds a blur effect while fading */
+}
+.section, header, footer {
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out, filter 0.7s ease-out;
+  will-change: opacity, transform, filter;
+}
+
+.section.fading, header.fading, footer.fading {
+  opacity: 0;  /* Full fade-out */
+  transform: scale(0.9) translateY(20px); /* Shrinks & moves slightly up */
+  filter: blur(12px); /* Adds a dramatic blur */
+}
+.section.fading {
+  filter: blur(15px) hue-rotate(20deg); /* Adds a slight color change */
+}
+
 
 }
 
