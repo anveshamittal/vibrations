@@ -2190,8 +2190,109 @@ textarea.input-field {
     bottom: 80px;
     left: 0;
   }
+  .section, header, footer {
+    transition: opacity 0.7s ease-out; /* More dramatic fade */
+}
+.section, header, footer {
+  transition: opacity 0.7s ease-out, filter 0.7s ease-out;
+  will-change: opacity, filter;
+}
 
+.section.fading, header.fading, footer.fading {
+  filter: blur(10px); /* Adds a blur effect while fading */
+}
+.section, header, footer {
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out, filter 0.7s ease-out;
+  will-change: opacity, transform, filter;
+}
+
+.section.fading, header.fading, footer.fading {
+  opacity: 0;  /* Full fade-out */
+  transform: scale(0.9) translateY(20px); /* Shrinks & moves slightly up */
+  filter: blur(12px); /* Adds a dramatic blur */
+}
+.section.fading {
+  filter: blur(15px) hue-rotate(20deg); /* Adds a slight color change */
 }
 
 
+}
+.bottom-sections {
+  display: flex;
+  justify-content: center; /* Center everything */
+  align-items: stretch; /* Ensure equal height */
+  gap: 40px; /* Equal spacing between both sections */
+  margin-top: 40px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
 
+.aftermovie-card,
+.merch-card {
+  flex: 1; /* Equal width */
+  min-width: 300px; /* Prevents them from shrinking too much */
+  max-width: 45%; /* Ensures equal space distribution */
+  background: var(--smoky-black-3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Ensures content stacks properly */
+  justify-content: center; /* Center content */
+  align-items: center;
+}
+.aftermovie-card {
+  background: var(--smoky-black-3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 500px; /* Ensures the card isn't too large */
+  margin: auto; /* Centers it */
+  overflow: hidden; /* Prevents any overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Video Container */
+.video-placeholder {
+  width: 100%;
+  max-width: 460px; /* Ensures video fits well */
+  height: auto; /* Adjusts height based on aspect ratio */
+}
+
+.video-placeholder video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Ensures proper scaling for the video */
+.video-placeholder iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/* Merchandise Photo Styling */
+.merch-card .merch-photo img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+  .bottom-sections {
+      flex-direction: column;
+      gap: 20px; /* Reduce gap on smaller screens */
+  }
+
+  .aftermovie-card,
+  .merch-card {
+      max-width: 100%; /* Full width on small screens */
+  }
+}
