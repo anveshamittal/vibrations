@@ -2296,3 +2296,57 @@ textarea.input-field {
       max-width: 100%; /* Full width on small screens */
   }
 }
+
+.last-container {
+  display: flex;
+  justify-content: space-between; /* Equal spacing */
+  align-items: flex-start; /* Align items properly */
+  gap: 203px; /* Spacing between sections */
+  margin-top: 40px;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+/* Remove background & shadows */
+.mehrisma, .team-members, .contacts {
+  flex: 1; /* Equal width */
+  min-width: 250px; /* Prevents shrinking */
+  max-width: 30%; /* Ensures proper spacing */
+  text-align: left;
+  padding: 10px; /* Minimal padding */
+  color: var(--white); /* Ensures text is readable */
+}
+.mehrisma h2, .team-members h2, .contacts h2{
+  color:  var(--gold-crayola);
+}
+.team-members h2{
+  left: -47px;
+  position: relative;
+}
+
+/* Developers List */
+.team-members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card {
+  width: 100%;
+  padding: 0px;
+  margin-top: 5px;
+  font-size: var(--fontSize-body-3);
+  color: var(--white); /* Gold-colored text */
+  
+}
+
+/* Responsive Fix for Small Screens */
+@media (max-width: 768px) {
+  .last-container {
+    flex-direction: column; /* Stack them vertically */
+    align-items: center;
+  }
+
+  .mehrisma, .team-members, .contacts {
+    max-width: 100%;
+  }
+}
