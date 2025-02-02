@@ -469,9 +469,9 @@ body.nav-active { overflow: hidden; }
 }
 
 .has-bg-image {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  background-position: bottom;
 }
 
 .input-field {
