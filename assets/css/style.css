@@ -197,6 +197,16 @@ body.nav-active { overflow: hidden; }
 ::-webkit-scrollbar-thumb { background-color: var(--gold-crayola); }
 
 
+.parallax {
+  background-image: url('../images/hero-slider-1.jpg'); /* Replace with your image */
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 
 
 
