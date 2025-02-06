@@ -197,17 +197,6 @@ body.nav-active { overflow: hidden; }
 ::-webkit-scrollbar-thumb { background-color: var(--gold-crayola); }
 
 
-.parallax {
-  background-image: url('../images/hero-slider-1.jpg'); /* Replace with your image */
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-
 
 
 /*-----------------------------------*\
@@ -972,7 +961,7 @@ body.nav-active { overflow: hidden; }
     scrollbar-width: none; */
 }
 .onstage-events::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .onstage-events li {
@@ -981,9 +970,9 @@ body.nav-active { overflow: hidden; }
 }
 
 .event-image {
-  width: 100%; 
-  height: 258px; 
-  object-fit: contain; 
+  width: 100%;
+  height: 258px;
+  object-fit: contain;
   margin-bottom: 5px;
 }
 
@@ -1365,14 +1354,16 @@ textarea.input-field {
   #FOOTER
 \*-----------------------------------*/
 
+
+
 .footer-top { margin-block-end: 70px; }
 
 .footer-brand {
   position: relative;
   padding: 50px 40px;
-  background: var(--smoky-black-1) url("../images/footer-form-bg.png");
+  /* background: var(--smoky-black-1) url("../images/footer-form-bg.png"); */
   background-position: center top;
-  background-repeat: repeat;
+  /* background-repeat: repeat; */
 }
 
 .footer-brand::before,
@@ -1452,7 +1443,34 @@ textarea.input-field {
   text-decoration: underline;
 }
 
+.footer {
+  position: relative;
+  background-color: #040405; /* Ensures remaining area is black */
+  overflow: hidden;
+  
+}
 
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 46px;
+  left: 43px;
+  width: 142%;
+  height: 100%;
+  /* background-image: url("../images/footer-form-bg.png"); */
+  background-image: url('../images/footer-bg.jpg'); 
+  opacity:25%;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain; /* Ensures it scales properly without stretching */
+  opacity: 0.3; /* Adjust opacity as needed */
+  z-index: 68;
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1; /* Ensures content is above the background */
+}
 
 
 
@@ -2346,7 +2364,7 @@ textarea.input-field {
   margin-top: 5px;
   font-size: var(--fontSize-body-3);
   color: var(--white); /* Gold-colored text */
-  
+
 }
 
 /* Responsive Fix for Small Screens */
