@@ -199,7 +199,7 @@ body.nav-active { overflow: hidden; }
 
 /* Parallax Background */
 .parallax {
-    background-image: url('https://64.media.tumblr.com/f8226f6d348698a2763782e85d3481fd/tumblr_olxmoxYP6m1rhwfb2o1_540.gifv');
+    background-image: url('../images/bollywood-gif.gif');
     height: 100vh; /* Full screen height */
     background-attachment: fixed;
     background-position: center;
