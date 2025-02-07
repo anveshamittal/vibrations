@@ -1465,7 +1465,10 @@ textarea.input-field {
   background-size: contain; /* Ensures it scales properly without stretching */
   opacity: 0.3; /* Adjust opacity as needed */
   z-index: 68;
+  /* z-index: 0; */
+  pointer-events: none;
 }
+
 
 .footer .container {
   position: relative;
@@ -2285,6 +2288,11 @@ textarea.input-field {
 }
 
 /* Video Container */
+.video-placeholder {
+  display: block !important;
+  z-index: 10;
+}
+
 .video-placeholder {
   width: 100%;
   max-width: 460px; /* Ensures video fits well */
