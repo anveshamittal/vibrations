@@ -199,14 +199,15 @@ body.nav-active { overflow: hidden; }
 
 /* Parallax Background */
 .parallax {
-    background-image: url('https://64.media.tumblr.com/f8226f6d348698a2763782e85d3481fd/tumblr_olxmoxYP6m1rhwfb2o1_540.gifv');
+    background-image: url('../images/bollywood-gif.gif');
     height: 100vh; /* Full screen height */
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: auto;
     position: relative;
     z-index: -1; /* Keeps background behind content */
+    opacity:0.4;
 }
 
 /* Parallax Section Wrapper */
@@ -1499,7 +1500,10 @@ textarea.input-field {
   background-size: contain; /* Ensures it scales properly without stretching */
   opacity: 0.3; /* Adjust opacity as needed */
   z-index: 68;
+  /* z-index: 0; */
+  pointer-events: none;
 }
+
 
 .footer .container {
   position: relative;
@@ -2319,6 +2323,11 @@ textarea.input-field {
 }
 
 /* Video Container */
+.video-placeholder {
+  display: block !important;
+  z-index: 10;
+}
+
 .video-placeholder {
   width: 100%;
   max-width: 460px; /* Ensures video fits well */

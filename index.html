@@ -41,11 +41,7 @@
 </head>
 
 <body id="top">
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 20ef21b731d63a2e951c75b0c9866dda14a10310
   <!-- 
     - #PRELOADER
   -->
@@ -1103,8 +1099,13 @@
             <h3>✨ Aftermovie: Vibrations'24!! ✨</h3>
             <div class="video-placeholder">
                 <video controls>
+<<<<<<< HEAD
                     <source src="./assets/images/aftermovie.mp4" type="video/mp4">
                    
+=======
+                    <source src="/assets/images/aftermovie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+>>>>>>> 7dfe417b2cc333c55dd40df0084bdc5d2f151cc0
                 </video>
             </div>
         </div>
@@ -1257,25 +1258,6 @@
             section.style.opacity = opacity;
             
             // Apply blur effect when fading
-            if (opacity < 0.5) {
-                section.classList.add("fading");
-            } else {
-                section.classList.remove("fading");
-            }
-        });
-    });
-  </script>
-  <script>
-    window.addEventListener("scroll", function () {
-        let sections = document.querySelectorAll(".section, header, footer");
-        sections.forEach((section) => {
-            let rect = section.getBoundingClientRect();
-            let opacity = 1 - (rect.top / (window.innerHeight * 0.6));  // Fades faster
-            opacity = Math.max(0, Math.min(1, opacity));  // Keeps opacity between 0-1
-            
-            section.style.opacity = opacity;
-  
-            // Add class when fading
             if (opacity < 0.5) {
                 section.classList.add("fading");
             } else {
