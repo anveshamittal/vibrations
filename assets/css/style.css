@@ -197,6 +197,40 @@ body.nav-active { overflow: hidden; }
 ::-webkit-scrollbar-thumb { background-color: var(--gold-crayola); }
 
 
+/* Parallax Background */
+.parallax {
+    background-image: url('https://64.media.tumblr.com/f8226f6d348698a2763782e85d3481fd/tumblr_olxmoxYP6m1rhwfb2o1_540.gifv');
+    height: 100vh; /* Full screen height */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1; /* Keeps background behind content */
+}
+
+/* Parallax Section Wrapper */
+.parallax-section {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    color: var(--white); /* Matches your theme */
+}
+
+/* Ensures sections appear over the parallax background */
+.content-section {
+    padding: 100px 20px;
+    background: var(--smoky-black-3); /* Keeps existing theme */
+    text-align: center;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Fixes issues on mobile */
+    }
+}
 
 
 
