@@ -215,8 +215,31 @@ body.nav-active { overflow: hidden; }
     position: relative;
     text-align: center;
     padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
     color: var(--white); /* Matches your theme */
+}
+
+/* Parallax Background */
+.parallax2 {
+  background-image: url('../images/parallax.jpg');
+  height: 100vh; /* Full screen height */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: auto; */
+  position: relative;
+  z-index: -1; /* Keeps background behind content */
+  opacity:0.4;
+}
+
+/* Parallax Section Wrapper */
+.parallax-section {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  color: var(--white); /* Matches your theme */
 }
 
 /* Ensures sections appear over the parallax background */
