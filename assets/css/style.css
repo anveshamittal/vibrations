@@ -569,7 +569,8 @@ body.nav-active { overflow: hidden; }
   display: none;
   position: absolute;
   max-width: max-content;
-  z-index: -1;
+  z-index: 1;
+    pointer-events: none;
 }
 
 .w-100 { width: 100%; }
