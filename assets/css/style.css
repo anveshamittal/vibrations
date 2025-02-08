@@ -221,7 +221,7 @@ body.nav-active { overflow: hidden; }
 
 /* Parallax Background */
 .parallax2 {
-  background-image: url('../images/parallax.jpg');
+  background-image: url('../images/giphy.gif');
   height: 100vh; /* Full screen height */
   background-attachment: fixed;
   background-position: center;
