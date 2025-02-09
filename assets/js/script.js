@@ -197,3 +197,65 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollEvents(); // Start infinite scrolling
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.createElement("canvas");
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext("2d");
+
+  canvas.style.position = "fixed";
+  canvas.style.top = "0";
+  canvas.style.left = "0";
+  canvas.style.pointerEvents = "none";
+  canvas.style.zIndex = "9999"; 
+  
+  let particles = [];
+  const maxParticles = 80;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  function createParticle(x, y) {
+    particles.push({
+      x,
+      y,
+      size: Math.random() * 2 + 0.5, // Smaller sparkles
+      speedX: (Math.random() - 0.5) * 1.5, // Gentle spread effect
+      speedY: (Math.random() - 0.5) * 1.5,
+      opacity: 1,
+      decay: 0.015 + Math.random() * 0.015,
+      color: `rgba(255, 204, 102, ${Math.random() * 0.8 + 0.2})` // Softer golden color
+    });
+    if (particles.length > maxParticles) particles.shift();
+  }
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((particle, index) => {
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
+      particle.opacity -= particle.decay;
+
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      ctx.fillStyle = particle.color;
+      ctx.shadowBlur = 6; // Soft glow effect
+      ctx.shadowColor = "rgba(255, 215, 150, 0.6)"; // Light golden glow
+      ctx.fill();
+
+      if (particle.opacity <= 0) particles.splice(index, 1);
+    });
+    requestAnimationFrame(drawParticles);
+  }
+
+  document.addEventListener("mousemove", (e) => {
+    for (let i = 0; i < 4; i++) createParticle(e.clientX, e.clientY);
+  });
+
+  drawParticles();
+});
