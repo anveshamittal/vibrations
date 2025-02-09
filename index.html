@@ -1083,16 +1083,31 @@
 
         <style>
         .sponsor-collage {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: repeat(4, auto);
-          gap: 10px;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-          max-width: 700px;
-          margin: auto;
-        }
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Default: 5 columns */
+    grid-template-rows: auto;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Tablet: Reduce columns to 3 */
+@media (max-width: 768px) {
+    .sponsor-collage {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile: Reduce to 2 per row */
+@media (max-width: 480px) {
+    .sponsor-collage {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
         .sponsor-img {
           object-fit: cover;
           border-radius: 10px;
