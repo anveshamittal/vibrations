@@ -2082,14 +2082,19 @@ textarea.input-field {
   .service .shape { display: block; }
 
   .service .shape-1 {
-    bottom: 5px;
-    left: 0;
+    bottom: 38px;
+    right: 12px;
+    opacity: 25%;
+  }
+  .service .shape-10 {
+    bottom: 103px;
+    left: 12px;
     opacity: 25%;
   }
 
   .service .shape-2 {
-    top: 0;
-    right: 0;
+    bottom: 32px;
+    left: 508px;
     opacity: 25%;
   }
 
