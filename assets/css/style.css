@@ -261,7 +261,21 @@ body.nav-active { overflow: hidden; }
         background-attachment: scroll; /* Fixes issues on mobile */
     }
 }
+@media (max-width: 768px) {
+  .parallax2 {
+    background-attachment: scroll; /* Prevents fixed background issue on mobile */
+    background-size: cover; /* Ensures full visibility */
+    height: 100vh; /* Keeps full screen height */
+  }
 
+  .parallax-section {
+    padding: 50px 15px; /* Adjust spacing for smaller screens */
+  }
+
+  .content-section {
+    padding: 50px 15px;
+  }
+}
 
 /*-----------------------------------*\
   #TYPOGRAPHY
