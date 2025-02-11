@@ -263,7 +263,7 @@ body.nav-active { overflow: hidden; }
 }
 @media (max-width: 768px) {
   .parallax2 {
-    height: 50vh; /* Adjust height for smaller screens */
+    height: 23vh; /* Adjust height for smaller screens */
     background-attachment: scroll; /* Disable fixed background on smaller devices */
   }
 }
@@ -444,6 +444,18 @@ body.nav-active { overflow: hidden; }
   height: auto;
   min-height: 100vh; 
   background-size: cover;
+}
+@media (max-width: 768px) {
+  .section.features {
+      background-attachment: scroll; /* Disable fixed background on smaller screens */
+      background-size: contain; /* Ensure the image fits within the container */
+  }
+}
+
+@media (max-width: 480px) {
+  .section.features {
+      background-size: auto; /* Cover the entire container on very small screens */
+  }
 }
 
 /* Overlay to reduce opacity */
@@ -1691,11 +1703,28 @@ textarea.input-field {
   opacity:25%;
   background-repeat: repeat;
   background-position: center;
-  background-size: contain; /* Ensures it scales properly without stretching */
+  background-size:contain; /* Ensures it scales properly without stretching */
   opacity: 0.3; /* Adjust opacity as needed */
   z-index: 68;
   /* z-index: 0; */
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  .footer::before {
+    background-size:contain; /* Adjust for smaller screens */
+    background-position: relative; /* Adjust positioning */
+    background-repeat: no-repeat;
+    left:-30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer::before {
+    background-size:contain; /* Ensure the image covers the area on mobile */
+    background-position: relative; /* Center the image */
+    background-repeat: no-repeat;
+    left:-30px;
+  }
 }
 
 
