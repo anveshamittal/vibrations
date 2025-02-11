@@ -259,3 +259,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   drawParticles();
 });
+const navLinks = document.querySelectorAll(".navbar-link");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("nav-active"); // Enable scrolling
+    });
+});

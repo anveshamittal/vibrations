@@ -188,7 +188,7 @@ body {
 
 body.loaded { overflow: overlay; }
 
-body.nav-active { overflow: hidden; }
+body.nav-active { overflow: auto; }
 
 ::-webkit-scrollbar { width: 5px; }
 
