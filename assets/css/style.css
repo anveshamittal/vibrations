@@ -410,7 +410,7 @@ body.nav-active { overflow: auto; }
 }
 .section.event {
   position: relative;
-  background: url("/assets/images/iifa.jpg") no-repeat center center/cover;
+  background: url("../images/iifa.jpg") no-repeat center center/cover;
   padding: 60px 0; /* Adjust padding as needed */
   background-size: cover;  /* Ensures full image is shown without cropping */
   background-attachment: fixed; /* Keeps it in place when scrolling  */
