@@ -449,14 +449,14 @@ body.nav-active { overflow: auto; }
 }
 @media (max-width: 768px) {
   .section.features {
-      background-attachment: scroll; /* Disable fixed background on smaller screens */
+      background-attachment: fixed; /* Disable fixed background on smaller screens */
       background-size: contain; /* Ensure the image fits within the container */
   }
 }
 
 @media (max-width: 480px) {
   .section.features {
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover; /* Ensures full coverage */
     min-height: auto; /* Allows it to expand dynamically */
     padding-bottom: 80px; 
