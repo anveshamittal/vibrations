@@ -19,7 +19,7 @@
   /**
    * COLORS
    */
-
+  --white: #ffffff;
   --gold-crayola: hsl(38, 61%, 73%);
   --quick-silver: hsla(0, 0%, 65%, 1);
   --davys-grey: hsla(30, 3%, 34%, 1);
@@ -49,7 +49,7 @@
    */
 
   /* font-family */
-  --fontFamily-forum: 'Forum', cursive;
+  --fontFamily-forum: 'Forum';
   --fontFamily-dm_sans: 'DM Sans', sans-serif;
 
   /* font-size */
@@ -287,7 +287,9 @@ body.nav-active { overflow: auto; }
 /*-----------------------------------*\
   #TYPOGRAPHY
 \*-----------------------------------*/
-
+.headline-1, .headline-2, .title-1, .title-3, .title-4 {
+  color: #ffffff !important;
+}
 .display-1,
 .headline-1,
 .headline-2,
@@ -2611,7 +2613,7 @@ textarea.input-field {
   min-width: 250px; /* Prevents shrinking */
   max-width: 30%; /* Ensures proper spacing */
   text-align: left;
-  padding: 10px; /* Minimal padding */
+  padding: 9px; /* Minimal padding */
   color: var(--white); /* Ensures text is readable */
 }
 .mehrisma h2, .team-members h2, .contacts h2{
