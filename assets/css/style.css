@@ -410,7 +410,7 @@ body.nav-active { overflow: auto; }
 }
 .section.event {
   position: relative;
-  background: url("../images/iifa.jpg") no-repeat center center/cover;
+  background: url("https://github.com/anveshamittal/vibrations/blob/main/assets/images/iifa.jpg") no-repeat center center/cover;
   padding: 60px 0; /* Adjust padding as needed */
   background-size: cover;  /* Ensures full image is shown without cropping */
   background-attachment: fixed; /* Keeps it in place when scrolling  */
@@ -1112,7 +1112,7 @@ body.nav-active { overflow: auto; }
 
 
 #about, #offstage {
-  background: url("/assets/images/s.avif") no-repeat center center;
+  background: url("https://github.com/anveshamittal/vibrations/blob/main/assets/images/s.avif") no-repeat center center;
   background-size: cover;  /* Ensures full coverage */
   background-attachment: fixed; /* Keeps it in place while scrolling */
   padding: 50px 0; /* Adds spacing */
