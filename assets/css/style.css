@@ -457,7 +457,7 @@ body.nav-active { overflow: auto; }
 @media (max-width: 480px) {
   .section.features {
     background-attachment: fixed;
-    background-size: cover; /* Ensures full coverage */
+    background-size: conatin; /* Ensures full coverage */
     min-height: auto; /* Allows it to expand dynamically */
     padding-bottom: 80px; 
       background-size: auto; /* Cover the entire container on very small screens */
