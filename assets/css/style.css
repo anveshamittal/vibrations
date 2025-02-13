@@ -1112,7 +1112,7 @@ body.nav-active { overflow: auto; }
 
 
 #about, #offstage {
-  background: url("https://github.com/anveshamittal/vibrations/blob/main/assets/images/s.avif") no-repeat center center;
+  background: url("../images/s.avif") no-repeat center center;
   background-size: cover;  /* Ensures full coverage */
   background-attachment: fixed; /* Keeps it in place while scrolling */
   padding: 50px 0; /* Adds spacing */
