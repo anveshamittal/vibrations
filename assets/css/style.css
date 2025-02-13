@@ -437,11 +437,11 @@ body.nav-active { overflow: auto; }
 /* Add a background image with opacity effect */
 .section.features {
   position: relative;
-  background: url("https://github.com/anveshamittal/vibrations/raw/main/assets/images/shape-4.png") no-repeat center center/cover;
+  background: url("/assets/images/shape-4.png") no-repeat center center/cover;
   padding: 50px 0;
   background-size: contain;  /* Ensures full image is shown without cropping */
   background-attachment: fixed; /* Keeps it in place when scrolling  */
-  background-repeat: no-repeat; /* Prevents tiling */
+  background-repeat: no-repeat; /* Prevent stiling */
   width: 100%;
   height: auto;
   min-height: 100vh; 
