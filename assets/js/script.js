@@ -268,3 +268,15 @@ navLinks.forEach(link => {
         document.body.classList.remove("nav-active"); // Enable scrolling
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const offstageLink = document.querySelector('a[href="#offstage"]');
+  const offstageSection = document.querySelector("#offstage");
+
+  if (offstageLink && offstageSection) {
+    offstageLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      offstageSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+});
