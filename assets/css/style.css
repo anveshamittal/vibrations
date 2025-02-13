@@ -457,7 +457,7 @@ body.nav-active { overflow: auto; }
 @media (max-width: 480px) {
   .section.features {
     background-attachment: scroll;
-    background-size: cover; /* Ensures full coverage */
+    background-size: contain; /* Ensures full coverage */
     min-height: auto; /* Allows it to expand dynamically */
     padding-bottom: 80px; 
       background-size: auto; /* Cover the entire container on very small screens */
@@ -2618,7 +2618,7 @@ textarea.input-field {
   min-width: 250px; /* Prevents shrinking */
   max-width: 30%; /* Ensures proper spacing */
   text-align: left;
-  padding: 9px; /* Minimal padding */
+  padding: 6px; /* Minimal padding */
   color: var(--white); /* Ensures text is readable */
 }
 .mehrisma h2, .team-members h2, .contacts h2{
