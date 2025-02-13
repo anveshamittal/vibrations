@@ -1104,6 +1104,7 @@ body.nav-active { overflow: auto; }
   #ABOUT
 \*-----------------------------------*/
 
+
 #about, #offstage {
   background: url("/assets/images/s.avif") no-repeat center center;
   background-size: cover;  /* Ensures full coverage */
@@ -1117,7 +1118,7 @@ body.nav-active { overflow: auto; }
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  z-index: 0;
+  z-index: -1;
 }
 
 #about .container, #offstage .container {
