@@ -202,6 +202,12 @@ body.nav-active { overflow: auto; }
   background-color: #f9f6f6;
 }
 
+.lilita-one-regular {
+  font-family: "Lilita One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* Parallax Background */
 .parallax {
@@ -456,11 +462,12 @@ body.nav-active { overflow: auto; }
 
 @media (max-width: 480px) {
   .section.features {
-    background-attachment: fixed;
-    background-size: conatin; /* Ensures full coverage */
-    min-height: auto; /* Allows it to expand dynamically */
-    padding-bottom: 80px; 
-      background-size: auto; /* Cover the entire container on very small screens */
+      min-height: auto; 
+      
+      background-size: 200% 98%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
   }
 }
 
@@ -1118,7 +1125,14 @@ body.nav-active { overflow: auto; }
   padding: 50px 0; /* Adds spacing */
   color: white; /* Ensures text is visible */
 }
-
+@media (max-width: 768px) { 
+  #about, #offstage {
+    background-size: 135% 103%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: fixed;
+  }
+}
 #about::before, #offstage::before {
   content: "";
   position: absolute;
