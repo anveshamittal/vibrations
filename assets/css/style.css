@@ -19,7 +19,7 @@
   /**
    * COLORS
    */
-
+  --white: #ffffff;
   --gold-crayola: hsl(38, 61%, 73%);
   --quick-silver: hsla(0, 0%, 65%, 1);
   --davys-grey: hsla(30, 3%, 34%, 1);
@@ -49,7 +49,7 @@
    */
 
   /* font-family */
-  --fontFamily-forum: 'Forum', cursive;
+  --fontFamily-forum: 'Forum';
   --fontFamily-dm_sans: 'DM Sans', sans-serif;
 
   /* font-size */
@@ -188,13 +188,19 @@ body {
 
 body.loaded { overflow: overlay; }
 
-body.nav-active { overflow: hidden; }
+body.nav-active { overflow: auto; }
 
 ::-webkit-scrollbar { width: 5px; }
 
 ::-webkit-scrollbar-track { background-color: transparent; }
 
 ::-webkit-scrollbar-thumb { background-color: var(--gold-crayola); }
+.icon img {
+  border: 2px solid #040404;
+  border-radius: 63%;
+  padding: 0px;
+  background-color: #f9f6f6;
+}
 
 
 /* Parallax Background */
@@ -221,7 +227,7 @@ body.nav-active { overflow: hidden; }
 
 /* Parallax Background */
 .parallax2 {
-  background-image: url('../images/parallax.jpg');
+  background-image: url('../images/giphy.gif');
   height: 100vh; /* Full screen height */
   background-attachment: fixed;
   background-position: center;
@@ -255,12 +261,35 @@ body.nav-active { overflow: hidden; }
         background-attachment: scroll; /* Fixes issues on mobile */
     }
 }
+@media (max-width: 768px) {
+  .parallax2 {
+    height: 23vh; /* Adjust height for smaller screens */
+    background-attachment: scroll; /* Disable fixed background on smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax2 {
+    height: 23vh; /* Further adjust height for mobile devices */
+  }
+}
+
+
+  .parallax-section {
+    padding: 50px 15px; /* Adjust spacing for smaller screens */
+  }
+
+  .content-section {
+    padding: 50px 15px;
+  }
 
 
 /*-----------------------------------*\
   #TYPOGRAPHY
 \*-----------------------------------*/
-
+.headline-1, .headline-2, .title-1, .title-3, .title-4 {
+  color: #ffffff !important;
+}
 .display-1,
 .headline-1,
 .headline-2,
@@ -381,7 +410,7 @@ body.nav-active { overflow: hidden; }
 }
 .section.event {
   position: relative;
-  background: url("/assets/images/iifa.jpg") no-repeat center center/cover;
+  background: url("../images/iifa.jpg") no-repeat center center/cover;
   padding: 60px 0; /* Adjust padding as needed */
   background-size: cover;  /* Ensures full image is shown without cropping */
   background-attachment: fixed; /* Keeps it in place when scrolling  */
@@ -408,15 +437,31 @@ body.nav-active { overflow: hidden; }
 /* Add a background image with opacity effect */
 .section.features {
   position: relative;
-  background: url("/assets/images/shape-4.png") no-repeat center center/cover;
+  background: url("../images/shape-4.png") no-repeat center center/cover;
   padding: 50px 0;
   background-size: contain;  /* Ensures full image is shown without cropping */
   background-attachment: fixed; /* Keeps it in place when scrolling  */
-  background-repeat: no-repeat; /* Prevents tiling */
+  background-repeat: no-repeat; /* Prevent stiling */
   width: 100%;
   height: auto;
   min-height: 100vh; 
   background-size: cover;
+}
+@media (max-width: 768px) {
+  .section.features {
+      background-attachment: fixed; /* Disable fixed background on smaller screens */
+      background-size: contain; /* Ensure the image fits within the container */
+  }
+}
+
+@media (max-width: 480px) {
+  .section.features {
+    background-attachment: fixed;
+    background-size: conatin; /* Ensures full coverage */
+    min-height: auto; /* Allows it to expand dynamically */
+    padding-bottom: 80px; 
+      background-size: auto; /* Cover the entire container on very small screens */
+  }
 }
 
 /* Overlay to reduce opacity */
@@ -569,7 +614,8 @@ body.nav-active { overflow: hidden; }
   display: none;
   position: absolute;
   max-width: max-content;
-  z-index: -1;
+  z-index: 0;
+    pointer-events: none;
 }
 
 .w-100 { width: 100%; }
@@ -1064,8 +1110,9 @@ body.nav-active { overflow: hidden; }
   #ABOUT
 \*-----------------------------------*/
 
+
 #about, #offstage {
-  background: url("/assets/images/s.avif") no-repeat center center;
+  background: url("../images/s.avif") no-repeat center center;
   background-size: cover;  /* Ensures full coverage */
   background-attachment: fixed; /* Keeps it in place while scrolling */
   padding: 50px 0; /* Adds spacing */
@@ -1077,7 +1124,7 @@ body.nav-active { overflow: hidden; }
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  z-index: 1;
+  z-index: -1;
 }
 
 #about .container, #offstage .container {
@@ -1110,9 +1157,9 @@ body.nav-active { overflow: hidden; }
 
 .event-image {
   width: 100%;
-  height: 258px;
-  object-fit: contain;
-  margin-bottom: 5px;
+    height: 175px;
+    object-fit: fill;
+    margin-bottom: 21px;
 }
 
 
@@ -1663,11 +1710,28 @@ textarea.input-field {
   opacity:25%;
   background-repeat: repeat;
   background-position: center;
-  background-size: contain; /* Ensures it scales properly without stretching */
+  background-size:contain; /* Ensures it scales properly without stretching */
   opacity: 0.3; /* Adjust opacity as needed */
   z-index: 68;
   /* z-index: 0; */
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  .footer::before {
+    background-size:contain; /* Adjust for smaller screens */
+    background-position: relative; /* Adjust positioning */
+    background-repeat: no-repeat;
+    left:-30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer::before {
+    background-size:contain; /* Ensure the image covers the area on mobile */
+    background-position: relative; /* Center the image */
+    background-repeat: no-repeat;
+    left:-30px;
+  }
 }
 
 
@@ -2061,14 +2125,19 @@ textarea.input-field {
   .service .shape { display: block; }
 
   .service .shape-1 {
-    bottom: 5px;
-    left: 0;
+    bottom: 38px;
+    right: 12px;
+    opacity: 25%;
+  }
+  .service .shape-10 {
+    bottom: 103px;
+    left: 12px;
     opacity: 25%;
   }
 
   .service .shape-2 {
-    top: 0;
-    right: 0;
+    bottom: 32px;
+    left: 508px;
     opacity: 25%;
   }
 
@@ -2549,7 +2618,7 @@ textarea.input-field {
   min-width: 250px; /* Prevents shrinking */
   max-width: 30%; /* Ensures proper spacing */
   text-align: left;
-  padding: 10px; /* Minimal padding */
+  padding: 6px; /* Minimal padding */
   color: var(--white); /* Ensures text is readable */
 }
 .mehrisma h2, .team-members h2, .contacts h2{
