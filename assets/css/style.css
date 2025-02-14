@@ -206,6 +206,8 @@ body.nav-active { overflow: auto; }
   font-family: "Lilita One", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 40px;
+    color: #c8b96a;
 }
 
 
