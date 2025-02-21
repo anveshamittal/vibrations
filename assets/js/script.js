@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
               eventContainer.scrollLeft += scrollSpeed;
 
               // Ensure all items scroll before resetting
-              if (eventContainer.scrollLeft + eventContainer.clientWidth >= eventContainer.scrollWidth - 5) {
+              if (eventContainer.scrollLeft + eventContainer.clientWidth >= eventContainer.scrollWidth - 1) {
                   setTimeout(() => {
                       eventContainer.scrollLeft = 0; // Reset only after a delay
                   }, 1000); // Add delay for better UX
