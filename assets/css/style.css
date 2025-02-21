@@ -1149,7 +1149,7 @@ body.nav-active { overflow: auto; }
 }
 
 
-.onstage-events {
+.onstage-events  {
   display: flex;
   /* justify-content: center; */
   align-items: stretch;
@@ -1159,8 +1159,8 @@ body.nav-active { overflow: auto; }
   list-style: none;
   margin: 0;
   width: 240%;
-  /* scroll-behavior: smooth;
-    scrollbar-width: none; */
+ /* scroll-behavior: smooth; */
+    /*  scrollbar-width: none; */
 }
 .onstage-events::-webkit-scrollbar {
   display: none;
@@ -1169,6 +1169,17 @@ body.nav-active { overflow: auto; }
 .onstage-events li {
   flex: 0 0 auto; /* Prevents shrinking and ensures items remain horizontal */
   width: 250px; /* Set a fixed width for the cards */
+}
+@media (max-width: 768px) {
+  .onstage-events, .offstage-events {
+    overflow-x: scroll;
+    width: 100%;
+  }
+  
+  .onstage-events li, .offstage-events li {
+    flex: 0 0 auto; /* Ensure full visibility */
+    max-width: 90%; /* Adjust width */
+  }
 }
 
 .event-image {
