@@ -2623,6 +2623,7 @@ textarea.input-field {
 
 /* Merchandise Photo Styling */
 .merch-card .merch-photo img {
+  padding: 15px;
   width: 100%;
   max-width: 250px;
   border-radius: 10px;
