@@ -2647,7 +2647,7 @@ textarea.input-field {
   display: flex;
   justify-content: space-between; /* Equal spacing */
   align-items: flex-start; /* Align items properly */
-  gap: 203px; /* Spacing between sections */
+  gap: 201px; /* Spacing between sections */
   margin-top: 40px;
   flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
 }
