@@ -583,11 +583,16 @@ body.nav-active { overflow: auto; }
 }
 
 /* Grid Layout */
-.grid-list {
+.grid-list2{
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   justify-content: center;
+  align-items: center;
+}
+.grid-list {
+  display: grid;
+  gap: 20px;
   align-items: center;
 }
 
