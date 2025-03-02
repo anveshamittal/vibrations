@@ -599,7 +599,7 @@ body.nav-active { overflow: auto; }
 /* Feature Card Animation with Dynamic Effects */
 .feature-card {
   position: relative;
-  width: 268px;
+  width: 177px;
   height: 200px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
